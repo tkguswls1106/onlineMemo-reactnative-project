@@ -3,7 +3,6 @@ import { WebView } from 'react-native-webview';
 import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import { useEffect, useRef } from 'react';
-import { Text, TextInput } from 'react-native';
 import { BackHandler } from 'react-native';
 
 export default function App() {
@@ -18,7 +17,7 @@ export default function App() {
   };
 
   useEffect(() => {
-    
+
     // Android 하드웨어 뒤로 가기 버튼 처리를 위한 이벤트 리스너 추가
     BackHandler.addEventListener('hardwareBackPress', onAndroidBackPress);
     // 언마운트 시 해당 이벤트 리스너 제거
