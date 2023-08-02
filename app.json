@@ -22,7 +22,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.shj.onlinememo"
+      "package": "com.shj.onlinememo",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
