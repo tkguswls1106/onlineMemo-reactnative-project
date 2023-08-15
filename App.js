@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { WebView } from 'react-native-webview';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, BackHandler } from 'react-native';
 import Constants from 'expo-constants';
 import { useEffect, useRef } from 'react';
-import { BackHandler } from 'react-native';
+import * as Clipboard from 'expo-clipboard';
 
 export default function App() {
 
@@ -14,6 +14,13 @@ export default function App() {
       return true;
     }
     return false;
+  };
+
+  const handleWebViewMessage = async (event) => {
+    const clipboardData = event.nativeEvent.data;
+
+    // 모바일 클립보드에 데이터 저장
+    await Clipboard.setStringAsync(clipboardData);
   };
 
   useEffect(() => {
@@ -32,6 +39,7 @@ export default function App() {
       source={{ uri: 'https://www.onlinememo.kr' }}
       ref={webview}
       textZoom={100}
+      onMessage={handleWebViewMessage}
     />
   );
 }
