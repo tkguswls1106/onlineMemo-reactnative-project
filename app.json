@@ -2,7 +2,7 @@
   "expo": {
     "name": "온라인메모",
     "slug": "onlinememo-reactnative",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -23,7 +23,8 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.shj.onlinememo",
-      "versionCode": 2
+      "versionCode": 3,
+      "targetSdkVersion": 34
     },
     "web": {
       "favicon": "./assets/favicon.png"
